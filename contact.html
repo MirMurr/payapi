@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
+    <script src="validate.js" async></script>
+    <script src="ready.js" async></script>
+
+    <title>Frontend Mentor | PayAPI Website Challenge</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="navlinks" id="navigation">
+          <li>
+            <a href="index.html" class="current">
+              <div class="logo-container">
+                <img src="./assets/shared/desktop/logo.svg" alt="payapi logo">
+              </div>
+            </a>
+          </li>
+          <li><a class="navlink" href="./pricing.html">Pricing</a></li>
+          <li><a class="navlink" href="./about.html">About</a></li>
+          <li><a class="navlink" href="./contact.html">Contact</a></li>
+          <li><button type="button" class="demo-mobile" onclick="window.location.href='./contact.html'">Schedule a demo</button></li>
+        </ul>
+        <button type="button" class="demo" onclick="window.location.href='./contact.html'">Schedule a demo</button>
+        <div class="circle-img-container pricing-c">
+          <img src="./assets/shared/desktop/bg-pattern-circle.svg" alt="circle pattern image">
+        </div>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container-main-contact">
+        <h1>Submit a help request and<br> we’ll get in touch shortly.</h1>
+        <div class="contact-container">
+          <form id="form" name="submit-to-google-sheet">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="Name" placeholder="Name">
+            <div id="error-name"></div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email" placeholder="Email Address" value="">
+            <div id="error-msg"></div>
+            <label for="company-name">Company Name</label>
+            <input type="text" id="company-name" name="Company" placeholder="Company Name">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="Title" placeholder="Title">
+            <label for="msg">Message</label>
+            <textarea id="msg" name="Message" placeholder="Message"></textarea>
+            <label for="checkbox" class="checkbox">
+              <input type="checkbox" name="Checkbox" id="checkbox">
+              <span>Stay up-to-date with company announcements and<br> updates to our API</span>
+            </label> 
+            <button class="submit-btn access" type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="icons-contact-container">
+          <h3>Join the thousands of innovators already<br> building with us</h3>
+          <div class="ref-icon-container"> <!--this should be grid, mobile layout 2 col-->
+            <div>
+              <img src="./assets/shared/desktop/tesla.svg" alt="tesla icon">
+            </div>
+            <div>
+              <img src="./assets/shared/desktop/microsoft.svg" alt="microsoft icon">
+            </div>
+            <div>
+              <img src="./assets/shared/desktop/hewlett-packard.svg" alt="HP icon">
+            </div>
+            <div>
+              <img src="./assets/shared/desktop/oracle.svg" alt="oracle icon">
+            </div>
+            <div>
+              <img src="./assets/shared/desktop/google.svg" alt="google icon">
+            </div>
+            <div>
+              <img src="./assets/shared/desktop/nvidia.svg" alt="nvidia icon">
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="form-ready">
+        <h2>Ready to start?</h2>
+        <form class="ready-form readyjs" name="submit-to-google-sheet">
+          <label for="ready-email" hidden>Message</label>
+          <input type="email" name="Ready Form" placeholder="Enter email address" id="ready-email">
+          <button type="submit" class="demo">Schedule a Demo</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="icon-container footer">
+        <ul class="navlinks">
+          <div class="logo-container">
+            <img src="./assets/shared/desktop/logo.svg" alt="payapi logo">
+          </div>
+          <li><a class="navlink" href="./pricing.html">Pricing</a></li>
+          <li><a class="navlink" href="./about.html">About</a></li>
+          <li><a class="navlink" href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="social-icons-container">
+        <div>
+          <a href="facebook.com"><img src="./assets/shared/desktop/facebook.svg" alt="facebook logo" aria-label="facebook logo"></a>
+        </div>
+        <div>
+          <a href="twitter.com"><img src="./assets/shared/desktop/twitter.svg" alt="twitter logo" aria-label="twitter logo"></a>
+        </div>
+        <div>
+          <a href="linkedin.com"><img src="./assets/shared/desktop/linkedin.svg" alt="linkedin logo" aria-label="linkedin logo"></a>
+        </div>
+      </div>
+      <div class="circle-img-container-footer">
+        <img src="./assets/shared/desktop/bg-pattern-circle.svg" alt="circle pattern image">
+      </div>
+    </footer>
+  </body>
+
+</html>

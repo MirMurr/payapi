@@ -1,0 +1,1668 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=DM+Serif+Display&family=Epilogue:wght@500;700&family=Great+Vibes&family=Inter:wght@300;400&family=Kumbh+Sans:wght@200;400;500;700&family=Montserrat:wght@300;400&family=Mukta:wght@300;400;500;700&family=Nixie+One&family=Nunito:wght@200;300;600;700&family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@700&family=Raleway:wght@400;700&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=DM+Serif+Display&family=Epilogue:wght@500;700&family=Great+Vibes&family=Inter:wght@300;400&family=Kumbh+Sans:wght@200;400;500;700&family=Montserrat:wght@300;400&family=Mukta:wght@300;400;500;700&family=Nixie+One&family=Nunito:wght@200;300;600;700&family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@700&family=Public+Sans:wght@100;200;300;400;500&family=Raleway:wght@400;700&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400&display=swap');
+
+
+:root {
+    --ff-heading: "DM Serif Display", serif;
+    --ff-body: "Public Sans", sans-serif;
+
+    --clr-primary-btn: #ba4270;
+    --clr-secondary-btn: #da6d97;
+
+    --clr-primary-white: #fbfcfe;
+
+    --clr-secondary-light-blue: #6c8294;
+    --clr-secondary-mid-blue: #36536b;
+    --clr-secondary-dark-blue: #1b262f;
+    --clr-primary-bg: rgb(237, 243, 248);
+
+    /*placeholder fonts*/
+    --fs-small-placeholder: 0.7rem;
+
+    /*body fonts*/
+    --fs-body: 0.9375;
+    /*design spec*/
+
+    /*Heading fonts*/
+    --fs-500: 4.5rem;
+    --fs-400: 3.5rem;
+    /*h1 small*/
+    --fs-300: 3rem;
+    /*h2 small*/
+    --fs-200: 2rem;
+    /*h3 big*/
+    --fs-100: 1.125rem;
+    /*h3 small*/
+    --fs-000: 1.5rem;
+    /*h4 small*/
+
+    /*Paddings*/
+    --paddinglr-5: 5rem;
+    --paddinglr-6: 6rem;
+}
+
+@media (min-width: 130em) {
+    :root {
+        --fs-body: 1.25;
+        /*design spec*/
+
+        --fs-500: 5.5rem;
+        --fs-400: 4.5rem;
+        /*h1 small*/
+        --fs-300: 4rem;
+        /*h2 small*/
+        --fs-200: 3rem;
+        /*h3 big*/
+        --fs-100: 2.125rem;
+        /*h3 small*/
+        --fs-000: 2.5rem;
+    }
+}
+
+/*font size for smaller devices*/
+/*or 63.9rem*/
+@media (max-width: 1023px) {
+    :root {
+        --fs-body: 1.25;
+        /*design spec*/
+        --fs-500: 4rem;
+        /*h1 big*/
+        /*maybe too big for tablet*/
+
+        /*adjust these:*/
+        --fs-400: 3rem;
+        /*h1 small*/
+        /*ADJUSTED*/
+        --fs-300: 2.7rem;
+        /*h2 small*/
+        /*ADJUSTED*/
+        --fs-200: 2rem;
+        /*h3 big*/
+        /* ADJUSTED */
+        --fs-100: 2.125rem;
+        /*h3 small*/
+        --fs-000: 1.25rem;
+        /*h4 small*/
+        /*ADJUSTED*/
+
+        /*Paddings*/
+        --paddinglr-5: 2.5rem;
+        --paddinglr-6: 6rem;
+    }
+}
+
+@media (max-width: 650px) {
+    :root {
+        --fs-body: 1.25;
+        /*design spec*/
+        --fs-500: 2.8rem;
+        /*h1 big*/
+
+        /*adjust these:*/
+        --fs-400: 2.4rem;
+        /*h1 small*/
+        --fs-300: 2.2rem;
+        /*h2 small*/
+        --fs-200: 2rem;
+        /*h3 big*/
+        --fs-100: 2.125rem;
+        /*h3 small*/
+        --fs-000: 1.25rem;
+        /*h4 small*/
+
+        /*Paddings*/
+        --paddinglr-5: 1.3rem;
+        --paddinglr-6: 6rem;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--clr-primary-bg);
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+/* BUTTONS */
+
+button.demo, button.demo-mobile, button.demo-desktop {
+    height: 3rem;
+    width: 11rem;
+    border: none;
+    outline: none;
+    color: var(--clr-primary-white);
+    font-weight: 700;
+    margin-left: auto;
+    border-radius: 2rem;
+    padding: 0 1rem;
+    line-height: 1.5rem;
+    vertical-align: middle;
+    background-color: #ba4270;
+}
+
+button.demo-mobile {
+    display: none;
+}
+
+button:hover, input:hover, textarea:hover {
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+button.demo:hover, button.demo-desktop:hover {
+    background-color: var(--clr-secondary-btn);
+}
+
+button.about-btn {
+    border: var(--clr-primary-white) 1.5px solid;
+    border-radius: 2rem;
+    background-color: var(--clr-secondary-dark-blue);
+    color: var(--clr-primary-white);
+    font-family: var(--ff-body);
+    font-size: .8rem;
+    font-weight: 600;
+    padding: 1rem;
+    width: 7rem;
+    z-index: 1; /*needed otherwise the link doesn´t work*/
+    position: absolute;
+}
+
+button.about-btn:hover {
+    color: var(--clr-secondary-dark-blue);
+    background-color: var(--clr-primary-white);
+}
+
+button.access {
+    border: 1px solid var(--clr-secondary-mid-blue);
+    border-radius: 2rem;
+    padding: 1rem 1.4rem;
+    background-color: transparent;
+    color: var(--clr-secondary-mid-blue);
+    font-size: .8rem;
+    font-weight: 800;
+}
+
+.submit-btn {
+    margin-top: 2rem;
+    width: 8rem;
+}
+
+button.access:hover, .submit-btn:hover {
+    color: var(--clr-primary-white);
+    background-color: var(--clr-secondary-mid-blue);
+}
+
+/* BUTTONS END */
+
+/* HEADINGS, PARAGRAPHS */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--clr-secondary-mid-blue);
+}
+
+span,
+p {
+    color: var(--clr-secondary-light-blue);
+    font-family: var(--ff-body);
+}
+
+input[type='checkbox'] {
+    accent-color: var(--clr-primary-btn);
+}
+
+/* END HEADINGS, PARAGRAPHS */
+
+/*** START HAMBURGER MENU DESKTOP ***/
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    background-color: var(--clr-secondary-dark-blue);
+}
+/*** END HAMBURGER MENU DESKTOP ***/
+
+/********************************************** START HOMEPAGE **********************************************/
+/******* START NAVBAR *******/
+nav {
+    display: flex;
+    padding: 1rem var(--paddinglr-5);
+}
+
+.navlinks {
+    display: flex;
+    position: relative;
+    /*edit maybe*/
+    width: 100%;
+    margin: auto;
+}
+
+.logo-container {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.logo-container img {
+    width: 100%;
+    height: auto;
+}
+
+.navlinks li,
+a {
+    text-decoration: none;
+    list-style: none;
+    color: var(--clr-secondary-light-blue);
+    font-family: var(--ff-body);
+    font-weight: 500;
+    align-self: center;
+    margin-right: 2rem;
+}
+
+.navlinks li a:hover {
+    color: var(--clr-secondary-dark-blue);
+}
+
+nav button.demo {
+    position: relative;
+    z-index: 20000;
+}
+
+@media only screen and (min-width: 1024px) {
+    .circle-img-container {
+        width: 50%;
+        min-width: 600px;
+        /*setting a min-width in pixels solves the issue that the image shrinks too much and disappears*/
+        position: absolute;
+        right: -10rem;
+        transform: translateX(10rem);
+        top: -35rem;
+        transform: translateY(22rem);
+        z-index: 0;
+    }
+
+    .circle img {
+        width: 100%;
+        min-width: 600px;
+    }
+}
+
+/******* END NAVBAR *******/
+
+/******* START INTRO SECTION *******/
+
+.intro-section {
+    display: flex;
+}
+
+.intro-section .text-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    padding: 0 var(--paddinglr-5);
+}
+
+h1 {
+    width: 100%;
+    font-family: var(--ff-heading);
+    font-size: var(--fs-500);
+    line-height: 4.5rem;
+}
+
+.intro-section .phone-img-container {
+    width: 50%;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.intro-section .phone-img-container img {
+    width: 100%;
+    /*min-width: 340px; can be deleted*/
+}
+
+/*start short form on homepage, about, contact */
+.intro .email-input-wrapper {
+    margin-top: 4rem;
+    align-self: flex-start;
+}
+
+.intro input, /*SECTIONS ADDED*/
+.ready-form input { /*email input field*/
+    border: none;
+    outline: none;
+    background-color: var(--clr-primary-white);
+    padding: 1rem;
+    width: 22rem;
+    color: var(--clr-secondary-mid-blue);
+    border-radius: 2rem;
+}
+
+
+::placeholder {
+    color: var(--clr-secondary-light-blue);
+    font-size: var(--fs-small-placeholder);
+    font-weight: 600;
+}
+
+/*formatting the form on the bottom*/
+
+.email-input-wrapper button, /*both btns on homepage*/
+.ready-form button {
+    /*scedule demo at input field btn*/
+    margin-left: -6rem;
+    transform: translateX(3rem);
+}
+
+/*text below the input*/
+.intro span {
+    margin-left: 1rem;
+    margin-top: .7rem;
+}
+
+.intro a {
+    color: var(--clr-secondary-mid-blue);
+}
+
+/******* END INTRO SECTION *******/
+
+
+/******* START REFERENCE SECTION - Who we work with *******/
+
+.reference {
+    display: flex;
+    background-color: var(--clr-secondary-dark-blue);
+}
+
+.reference .text-container {
+    width: 40%;
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    /* doesn´t work*/
+    padding: 5rem var(--paddinglr-5);
+}
+
+.circle-img-ref-container {
+    position: absolute;
+    height: auto;
+    min-width: 800px;
+    left: 0;
+    top: -25rem;
+    left: -22.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.circle-img-ref img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 0;
+    /* doesn´t work*/
+}
+
+.reference .text-container h2 {
+    color: var(--clr-primary-white);
+    font-size: var(--fs-300);
+}
+
+.reference .text-container p {
+    margin: 2rem 0;
+    line-height: 1.7rem;
+    color: var(--clr-primary-white);
+    opacity: 80%;
+}
+
+/*logos container - brands */
+.ref-icon-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: auto;
+    justify-items: center;
+    gap: 3rem;
+    height: 2.2rem;
+    width: auto;
+
+}
+
+.ref-icon-container img {
+    width: 100%;
+    height: auto;
+    filter: invert(10%) hue-rotate(100deg) brightness(240%) contrast(240%);
+}
+
+/******* END REFERENCE SECTION *******/
+
+/******* START EASY TO IMPLEMENT SECTION *****/
+
+.implement { /* container*/
+    display: flex;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+.implement .image-container {
+    width: 50%;
+    height: auto;
+    min-width: 49%;
+}
+
+.implement .image-container img {
+    width: 100%;
+}
+
+/*implement & ui-ux sections text containers*/
+.implement .text-container,
+.ux-ui .text-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ux-ui .text-container {
+    justify-content: center;
+    padding-left: var(--paddinglr-5);
+}
+
+.implement h3,
+.ux-ui h3 {
+    font-size: var(--fs-200);
+    margin-bottom: 2rem;
+}
+
+.implement p,
+.ux-ui p {
+    width: 60%;
+    min-width: 50%;
+    line-height: 2rem;
+}
+
+.ux-ui p {
+    width: 70%;
+}
+
+/***** START UI UX IMAGES SECTION *****/
+
+section.ux-ui {
+    display: flex;
+}
+
+.ux-ui .image-container-main {
+    display: flex;
+    width: 50%;
+    position: relative;
+}
+
+/*2 phones image */
+
+.ux-ui .phones {
+    width: 100%;
+    min-width: 360px;
+    margin-left: -3rem;
+    /*maybe not the best solution */
+    transform: translateX(1rem);
+}
+
+/*circle image background for 2 phones*/
+.circle-img-ux {
+    position: absolute;
+    right: -25rem;
+    top: -7rem;
+    /*right: -55%;
+    top: -25%;*/
+    min-width: 560px;
+    /*max-width: 700px; fix the figure with media query */
+    z-index: -1;
+    height: auto;
+}
+
+/***** END UI UX IMAGES SECTION *****/
+
+
+/******+START ADVANTAGES SECTION ***********/
+
+section.advantages,
+section.pricing,
+.about-numbers-main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 5rem;
+    padding: var(--paddinglr-5);
+}
+
+section.pricing {
+    display: flex;
+}
+
+section.advantages .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0rem;
+}
+
+.advantages h4 {
+    margin: 1.7rem 0rem;
+    font-size: var(--fs-000);
+    font-family: var(--ff-body);
+    font-weight: 900;
+}
+
+/******* END ADVANTAGES SECTION ***********/
+
+/******* START READY SECTION ***********/
+
+/*container */
+.form-ready {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem var(--paddinglr-5);
+}
+
+.ready-form .demo { /*button in form below*/
+    margin-left: -6rem;
+    transform: translateX(0);
+}
+
+.form-ready h2 {
+    font-size: var(--fs-300);
+}
+
+/******* END READY SECTION ***********/
+
+body {
+    position: relative;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    bottom: 0;
+    background-color: var(--clr-secondary-dark-blue);
+    padding: 1rem var(--paddinglr-5);
+    overflow: hidden;
+    position: relative; /* check position - whether footer sticks to the bottom */
+}
+
+.social-icons-container {
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.social-icons-container img:hover {
+    background-color: var(--clr-primary-btn);
+}
+
+footer .navlinks {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+footer .navlinks li a {
+    color: var(--clr-secondary-light-blue);
+}
+
+footer .navlinks li a:hover {
+    color: var(--clr-primary-white);
+}
+
+footer .logo-container {
+    margin-right: 3rem;
+    width: 100%;
+    height: auto;
+    margin-left: 0rem;
+    filter: invert(10%) hue-rotate(100deg) brightness(240%) contrast(240%);
+}
+
+footer .logo-container img {
+    width: 100%;
+    height: auto;
+}
+
+/********************************************** END HOMEPAGE **********************************************/
+
+/********************************************** START PRICING PAGE **********************************************/
+
+.title h1 {
+    padding: 0rem var(--paddinglr-5);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+section.pricing {
+    margin-top: 3rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.pricing-container-main {
+    height: 38rem;
+    /*edit maybe*/
+    height: auto;
+    /*edit maybe*/
+    margin-bottom: 0;
+}
+
+.pricing-container-main h4,
+.num {
+    color: var(--clr-primary-btn);
+    font-size: var(--fs-200);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/*description*/
+.pricing-container-main p {
+    margin-bottom: .5rem;
+}
+
+/*the price*/
+.pricing-container-main span {
+    font-size: var(--fs-300);
+    color: var(--clr-secondary-mid-blue);
+    font-weight: 800;
+    font-family: var(--ff-heading);
+    margin-bottom: 1.5rem;
+}
+
+/*the list elements*/
+.pricing-container-main ul {
+    margin-left: 1.7rem;
+    margin-top: 1.7rem;
+    margin-bottom: 1.7rem;
+    line-height: 2rem;
+    font-family: var(--ff-body);
+    list-style: none;
+    color: var(--clr-secondary-light-blue);
+}
+
+.pricing-container-main li.checked {
+    list-style-image: url(./assets/shared/desktop/icon-check.svg);
+    color: var(--clr-secondary-mid-blue);
+}
+
+.pricing-container-main button {
+    margin-top: 1rem;
+}
+
+/*edit circle image*/
+
+.pricing-c {
+    top: -55rem;
+    right: -17rem;
+    min-width: 710px;
+    /*KEY: WHEN RESPONSIVE: FIND THE APPROPRIATE MIN-WIDTH IT´S GOOD FOR SMALLER SCREENS*/
+}
+
+/********************************************** END PRICING PAGE**********************************************/
+
+/********************************************** START ABOUT PAGE**********************************************/
+.main-container-about,
+.main-container-culture {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+    margin: auto;
+    /*edit maybe*/
+    margin-top: 3rem;
+}
+
+.main-container-about div,
+.main-container-culture div {
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+.main-container-about h1 {
+    font-size: var(--fs-400);
+    line-height: 3.5rem;
+    margin: 3rem 0rem;
+}
+
+.main-container-about h3,
+.main-container-culture h3 {
+    width: 25%;
+    font-size: var(--fs-200);
+}
+
+.main-container-about p,
+.main-container-culture p {
+    width: 60%;
+    line-height: 1.9rem;
+    font-weight: 300;
+}
+
+
+/* start team member image section */
+
+.image-container-about-main {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.circle-image-container-about {
+    position: absolute;
+    z-index: -1;
+    top: -10rem;
+    left: -30rem;
+}
+
+.circle-image-container-about img {
+    width: 100%;
+    height: auto;
+}
+
+.team-image-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.team-image-container img {
+    width: 100%;
+    height: auto;
+}
+/* end team member image section */
+
+/* start numbers section */
+
+/*see base code above where pricing is - grid container*/
+.about-numbers-main {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 5rem;
+}
+
+/*see code above where pricing is*/
+div.num span,
+.num {
+    color: var(--clr-primary-btn);
+    font-weight: 200;
+    font-family: var(--ff-heading);
+    margin-bottom: 1.3rem;
+}
+
+.number-container:nth-child(1),
+.number-container:nth-child(2),
+.number-container:nth-child(3) {
+    color: var(--clr-secondary-mid-blue);
+    font-family: var(--ff-body);
+    font-weight: 200;
+}
+
+.number-container hr {
+    margin-bottom: 1.3rem;
+}
+/* end numbers section */
+
+/********************************************** END ABOUT PAGE **********************************************/
+
+/********************************************** START CONTACT PAGE **********************************************/
+
+.container-main-contact {
+    margin-top: 2rem;
+    padding: 0rem var(--paddinglr-5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container-main-contact h1 {
+    font-size: var(--fs-400);
+    width: 100%;
+}
+
+.contact-container form {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 2rem 0;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: space-between;
+}
+
+.contact-container form input,
+textarea {
+    border: none;
+    border-bottom: #36536b 1px solid;
+    background-color: transparent;
+    width: 27.8rem;
+    margin-bottom: 1rem;
+    padding: 1.3rem 0rem;
+}
+
+#msg {
+    padding: 3.5rem 0rem;
+}
+
+#checkbox {
+    width: 1rem;
+}
+
+label { /*with hidden attribute it throws an error W3C validation*/
+    display: none;
+}
+
+label.checkbox {
+    display: block;
+}
+
+label > span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: .8rem;
+}
+
+
+.icons-contact-container {
+    align-self: center;
+}
+
+.icons-contact-container h3 {
+    margin-bottom: 2rem;
+    font-size: var(--fs-200);
+    color: var(--clr-secondary-light-blue);
+}
+
+.icons-contact-container .ref-icon-container img {
+    filter: none;
+}
+
+.ref-icon-container {
+    height: auto;
+}
+
+/********************************************** END CONTACT PAGE **********************************************/
+
+/**************** Media queries - tablet *****************/
+
+@media only screen and (max-width: 1023px) {
+    /***** HOME PAGE *****/
+    .home,
+    .circle-img-container {
+        /* circle for the homepage*/
+        width: 100%;
+        min-width: 1073px;
+        /*maybe adjust min-width*/
+        position: absolute;
+        /*needed*/
+        left: 0;
+        top: -45rem;
+        transform: translateY(45rem);
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+
+    .circle-img-container img {
+        width: 100%;
+        /*maybe set a min-width in px*/
+    }
+
+    /*intro section container */
+    .intro-section {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+
+    .intro-section .phone-img-container {
+        justify-content: center;
+        /*maybe delete*/
+        margin: auto;
+    }
+
+    .intro-section .phone-img-container img {
+        width: 100%;
+        margin: auto;
+        transform: translateX(2rem);
+    }
+
+    .intro-section .text-container {
+        margin-top: -3rem;
+    }
+
+    .intro-section .text-container br {
+        display: none;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    /*start short form on homepage */
+    .intro .email-input-wrapper {
+        align-self: center;
+    }
+
+    /*text below the input - contact us*/
+    .intro span {
+        margin-left: 0;
+        margin-top: .9rem;
+        margin-bottom: 3.5rem;
+        align-self: center;
+    }
+
+    /*start reference - company icons*/
+    .reference {
+        flex-wrap: wrap-reverse;
+        overflow: hidden;
+    }
+
+    /*logos container - brands */
+    .ref-icon-container {
+        padding: 5rem 0;
+        z-index: 2;
+    }
+
+    /*position it to the top middle*/
+    .circle-img-ref-container {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -47rem;
+    }
+
+    .reference .text-container {
+        width: 100%;
+        overflow: visible;
+    }
+
+    .reference .text-container h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .reference .text-container p {
+        line-height: 1.9rem;
+        text-align: center;
+        width: 70%;
+        margin: auto;
+        /*maybe position it else*/
+        margin-bottom: 1.7rem;
+    }
+
+    button.about-btn {/*it centers the button*/
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* easy to implement section */
+    .implement {/* container*/
+        padding-top: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .implement .image-container {
+        width: 70%;
+        margin: auto;
+        transform: translateX(2rem);
+        margin-bottom: 2rem;
+    }
+
+    .implement .image-container img {
+        width: 100%;
+    }
+
+    /*implement & ui-ux sections text containers*/
+    .implement .text-container,
+    .ux-ui .text-container {
+        width: 100% !important;
+        align-items: center;
+        flex-wrap: wrap-reverse;
+        margin-top: -6rem;
+        text-align: center;
+    }
+
+    .ux-ui .text-container {
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .implement h3,
+    .ux-ui h3 {
+        margin-bottom: 1.5rem;
+    }
+
+    .implement p,
+    .ux-ui p {
+        width: 60%;
+    }
+
+    .implement p {
+        margin-bottom: 3rem;
+    }
+
+    /***** START UI UX IMAGES SECTION *****/
+
+    section.ux-ui {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+
+    .ux-ui .image-container-main {
+        transform: translateX(1rem);
+    }
+
+    /*2 phones image */
+    .ux-ui .phones {
+        margin-left: 0;
+        transform: translateX(0rem);
+    }
+
+    /*circle image background for 2 phones*/
+    .circle-img-ux {
+        display: none;
+    }
+
+    /*advantages section*/
+    section.advantages,
+    section.pricing,
+    .about-numbers-main {
+        gap: 1.2rem;
+    }
+
+    .advantages h4 {
+        margin: 1.7rem 0rem;
+        height: 2rem;
+    }
+
+    /*Ready section*/
+
+    /*container */
+    .form-ready {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .form-ready h2 {
+        margin-bottom: 1.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    /*pricing page - pricing section*/
+
+    .pricing-container-main h4,
+    .pricing-container-main p {
+        text-align: center;
+    }
+
+    .pricing-container-main h4 {
+        height: 3rem;
+    }
+
+    .pricing-container-main p {
+        height: 7rem;
+    }
+
+    /* piricng circle */
+
+
+    /*
+    .circle-img-container {
+        width: 50%;
+        min-width: 600px; /*setting a min-width in pixels solves the issue that the image shrinks too much and disappears
+        position: absolute;
+        right: -10rem;
+        transform: translateX(10rem);
+        top: -35rem;
+        transform: translateY(22rem);
+        z-index: 0; 
+    }*/
+
+    .home,
+    .circle-img-container {/* circle for the homepage*/
+        width: 100%;
+        min-width: 1073px;
+        /*maybe adjust min-width*/
+        position: absolute;
+        /*needed*/
+        left: 0;
+        top: -45rem;
+        transform: translateY(45rem);
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+
+    .pricing-c {
+        top: -30rem;
+        /*right: -13rem;*/
+        min-width: 710px;
+        /*KEY: WHEN RESPONSIVE: FIND THE APPROPRIATE MIN-WIDTH IT´S GOOD FOR SMALLER SCREENS*/
+        max-width: 720px;
+        min-width: 900px;
+        max-width: 910px;
+        transform: translateY(0rem);
+        left: 0%;
+        transform: translateX(30rem);
+        top: -35rem;
+    }
+
+    /*
+    .pricing-c img {
+        width: 400px;
+        height: auto;
+
+    }*/
+
+    /* start contact page*/
+
+    form br, br {
+        display: none;
+    }
+
+    .contact-container {
+        margin: auto;
+    }
+
+    .icons-contact-container {
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .icons-contact-container h3 {
+        margin-bottom: 0rem;
+    }
+
+    /* Start about page */
+    .main-container-about,
+    .main-container-culture {
+        width: 95%;
+    }
+
+    .main-container-about div,
+    .main-container-culture div {
+        justify-content: space-between;
+    }
+
+    .main-container-about h3,
+    .main-container-culture h3 {
+        width: 35%;
+    }
+
+    .main-container-about p,
+    .main-container-culture p {
+        width: 70%;
+    }
+
+    /* start team member image section */
+
+    .image-container-about-main {
+        position: relative;
+        margin-bottom: 3rem;
+    }
+
+    .circle-image-container-about {
+        display: none;
+    }
+
+    /* End about page */
+}
+
+
+@media only screen and (max-width: 650px) {
+    .navlinks li a,
+    section.pricing p {
+        display: none;
+    }
+
+    button.demo-mobile {
+        display: block;
+    }
+
+    nav button.demo {
+        display: none;
+    }
+    /*image in the top corner*/
+    .pricing-c {
+        min-width: 650px;
+        /*setting a min-width in pixels solves the issue that the image shrinks too much and disappears*/
+        transform: translateY(-26rem);
+        z-index: -1;
+        left: 30%;
+        top: -5rem;
+    }
+
+    .pricing-c img {
+        min-width: 400px;
+    } /*image in the top corner end*/
+
+    /******* START INTRO SECTION *******/
+    .intro-section {
+        margin-top: 3rem;
+    }
+
+    h1 {
+        margin-top: 1rem;
+        line-height: 2.7rem;
+    }
+
+    .intro-section .phone-img-container {
+        width: 90%;
+    }
+
+    .intro-section .phone-img-container img {
+        min-width: 340px;
+        /*might not needed*/
+    }
+
+    /*start short form on homepage, about, contact */
+    .intro .email-input-wrapper {
+        margin-top: 2rem;
+        align-self: center;
+        width: 100%;
+    }
+
+    .intro input,
+    .ready-form input {/*email input field*/
+        width: 100%;
+    }
+
+    /*formatting the form on the bottom*/
+    .email-input-wrapper button,
+    .ready-form button { /*scedule demo at input field btn*/
+        margin: 1rem 0;
+        transform: translateX(0rem);
+        width: 100%;
+    }
+
+    /*text below the input*/
+    .intro span {
+        margin-top: .7rem;
+    }
+
+    /******* END INTRO SECTION *******/
+
+    /******* START REFERENCE SECTION - Who we work with *******/
+    .reference .text-container {
+        width: 100%;
+        padding-top: 0;
+        padding-bottom: 4rem;
+    }
+
+
+
+    button.about-btn {/*it centers the button*/
+        position: static;
+        /*margin-left: 0%;
+        transform: translateX(0%); if I add this then the position changes*/   
+    }
+
+    .circle-img-ref-container {
+        top: -58rem;
+    }
+
+    .reference .text-container p {
+        line-height: 1.9rem;
+        width: 100%;
+    }
+
+    .ref-icon-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+        padding: 4rem 1rem;
+    }
+
+    /******* END REFERENCE SECTION *******/
+
+    .implement {/* container*/
+        padding-top: 2rem;
+    }
+
+    .implement .image-container {
+        width: 100%;
+        transform: translateX(1rem);
+        /*needed to center this*/
+    }
+
+    .implement .image-container img {
+        width: 100%;
+    }
+
+    /*implement & ui-ux sections text containers*/
+    .implement .text-container,
+    .ux-ui .text-container {
+        width: 100%;
+        align-items: center;
+        padding: 2rem var(--paddinglr-5);
+    }
+
+    .ux-ui .text-container {
+        justify-content: center;
+        margin-top: -3rem;
+    }
+
+    .implement p,
+    .ux-ui p,
+    .ux-ui .image-container-main {
+        width: 100%;
+    }
+
+    .ux-ui .phones {
+        transform: translateX(0rem);
+    }
+
+    /***** END UI UX IMAGES SECTION *****/
+
+    /******+START ADVANTAGES SECTION ***********/
+
+    section.advantages,
+    /*this might affect other elements as well*/
+    section.pricing,
+    .about-numbers-main {
+        grid-template-columns: 1fr;
+        gap: 0rem;
+    }
+
+    section.pricing {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        gap: 5rem;
+        padding: var(--paddinglr-5);
+    }
+
+    section.pricing {
+        grid-template: repeat(3, 1fr) / 1fr;
+        gap: 2rem;
+    }
+
+    section.advantages .container {
+        padding: 1.8rem 0rem;
+        line-height: 1.8rem;
+    }
+
+    .advantages h4 {
+        margin: 1rem 0rem;
+    }
+
+    /******* END ADVANTAGES SECTION ***********/
+
+    /* Start Ready section */
+    /*container */
+    .form-ready {
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+
+    .ready-form .demo {
+        margin-left: 0rem;
+    }
+
+    /* Start Pricing page */
+
+    .pricing-container-main {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-container-main ul {
+        margin-left: 0rem;
+    }
+
+    .pricing-container-main h4 {
+        margin-bottom: 4.5rem;
+    }
+
+    hr {
+        display: block;
+        width: 100%;
+    }
+    /* End pricing page */
+
+    /*Start contact page */
+    .container-main-contact {
+        justify-content: center;
+        padding: .8rem;
+    }
+
+    .contact-container form input,
+    textarea {
+        width: 100%;
+    }
+
+
+    label>span {
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: -2.1rem;
+        /*maybe not a good soution*/
+        margin-left: 1.8rem;
+    }
+    /****End contact page****
+
+    /********* Start about page ************/
+    .main-container-about,
+    .main-container-culture {
+        width: 100%;
+        height: auto;
+        margin-top: 2rem;
+        padding: 0 var(--paddinglr-5);
+        /*set it on media for this size :root*/
+    }
+
+    .main-container-about div,
+    .main-container-culture div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .main-container-about h1 br {
+        display: none;
+    }
+
+    .main-container-about h1 {
+        line-height: 2.8rem;
+    }
+
+    .main-container-about h3,
+    .main-container-culture h3 {
+        margin-bottom: 1.6rem;
+    }
+
+    .main-container-about p,
+    .main-container-culture p,
+    .main-container-about h3,
+    .main-container-culture h3 {
+        width: 100%;
+    }
+
+    /*see base code above where pricing is - grid container*/
+    .about-numbers-main {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .number-container hr {
+        margin-bottom: 1.3rem;
+    }
+    /*End about page */
+    
+    /*START HAMBURGER MENU */
+    .hamburger {
+        display: block;
+        margin-left: auto;
+    }
+
+    .hamburger.active {
+        position: absolute;
+        z-index: 55;
+        right: 0;
+        top: 2rem;
+    }
+
+    /*start animation which turns bar into an X*/
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        background-color: var(--clr-primary-white);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: var(--clr-primary-white);
+    }
+
+    /*end animation which turns bar into an X*/
+
+    nav .navlinks {
+        position: fixed;
+        right: -100%;
+        top: 0rem;
+        margin-top: 0rem;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    nav .logo-container {
+        display: none;
+        display: block;
+    }
+
+    nav.nav-item {
+        margin: 1rem;
+        align-self: flex-start;
+    }
+
+    nav .navlinks.active {
+        right: 0;
+        height: 30rem;
+        position: fixed;
+        top: 0rem;
+        max-width: 80%;
+        background-color: var(--clr-secondary-dark-blue);
+        padding-bottom: 3rem;
+        padding-top: 1rem;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        transition: ease .5s;
+    }
+
+    /*END HAMBURGER */
+
+    /* Start footer*/
+    footer {
+        height: 27rem;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .social-icons-container {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    footer .navlinks {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 3rem 0;
+        margin-bottom: 3rem;
+    }
+
+    footer .logo-container {
+        margin-bottom: 2rem;
+        width: 50%;
+        align-self: center;
+        height: auto;
+        margin-right: 0;
+    }
+
+    footer .logo-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    footer .navlinks li a, nav .navlinks li a  {
+        color: var(--clr-primary-white);
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+
+    footer .navlinks li a {
+        position: relative;
+        z-index: 1;
+    }
+
+    .nav button.demo {
+        margin: 0;
+    }
+
+    footer .circle-img-container-footer { /*edit this*/
+        position: absolute;
+        top: 14rem;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    footer .circle-img-container-footer img {
+        width: 800px;
+    }
+
+}
+
+@media only screen and (min-width: 650px){
+    footer .circle-img-container-footer {
+        position: absolute;
+        right: -24rem;
+        top: -10rem;
+        z-index: 0;
+    }
+
+}
