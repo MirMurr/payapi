@@ -59,9 +59,8 @@
     }
 }
 
-/*font size for smaller devices*/
-/*or 63.9rem*/
-@media (max-width: 1023px) {
+/*font size for smaller devices*/ /*or xrem*/
+@media (max-width: 1024px) {
     :root {
         --fs-body: 1.25;
         /*design spec*/
@@ -120,9 +119,6 @@
 *::before,
 *::after {
     box-sizing: border-box;
-}
-
-* {
     padding: 0;
     margin: 0;
 }
@@ -137,7 +133,6 @@ html {
 }
 
 /* BUTTONS */
-
 button.demo, button.demo-mobile, button.demo-desktop {
     height: 3rem;
     width: 11rem;
@@ -151,6 +146,10 @@ button.demo, button.demo-mobile, button.demo-desktop {
     line-height: 1.5rem;
     vertical-align: middle;
     background-color: #ba4270;
+}
+
+nav button.demo {
+    width: 14.5rem;
 }
 
 button.demo-mobile {
@@ -227,11 +226,9 @@ p {
 input[type='checkbox'] {
     accent-color: var(--clr-primary-btn);
 }
-
 /* END HEADINGS, PARAGRAPHS */
 
 /*** START HAMBURGER MENU DESKTOP ***/
-
 .hamburger {
     display: none;
     cursor: pointer;
@@ -258,7 +255,6 @@ nav {
 .navlinks {
     display: flex;
     position: relative;
-    /*edit maybe*/
     width: 100%;
     margin: auto;
 }
@@ -299,8 +295,7 @@ nav button.demo {
 @media only screen and (min-width: 1024px) {
     .circle-img-container {
         width: 50%;
-        min-width: 600px;
-        /*setting a min-width in pixels solves the issue that the image shrinks too much and disappears*/
+        min-width: 600px; /*setting a min-width in pixels solves the issue that the image shrinks too much and disappears*/
         position: absolute;
         right: -10rem;
         transform: translateX(10rem);
@@ -347,10 +342,9 @@ h1 {
 
 .intro-section .phone-img-container img {
     width: 100%;
-    /*min-width: 340px; can be deleted*/
 }
 
-/*start short form on homepage, about, contact */
+/*start short form on homepage */
 .intro .email-input-wrapper {
     margin-top: 4rem;
     align-self: flex-start;
@@ -366,7 +360,6 @@ h1 {
     color: var(--clr-secondary-mid-blue);
     border-radius: 2rem;
 }
-
 
 ::placeholder {
     color: var(--clr-secondary-light-blue);
@@ -1249,6 +1242,10 @@ label > span {
         display: none;
     }
 
+    .navlinks li, a {
+        margin-right: 0rem;
+    }
+
     button.demo-mobile {
         display: block;
     }
@@ -1256,6 +1253,7 @@ label > span {
     nav button.demo {
         display: none;
     }
+
     /*image in the top corner*/
     .pricing-c {
         min-width: 650px;
@@ -1313,7 +1311,6 @@ label > span {
     .intro span {
         margin-top: .7rem;
     }
-
     /******* END INTRO SECTION *******/
 
     /******* START REFERENCE SECTION - Who we work with *******/
@@ -1322,8 +1319,6 @@ label > span {
         padding-top: 0;
         padding-bottom: 4rem;
     }
-
-
 
     button.about-btn {/*it centers the button*/
         position: static;
@@ -1433,7 +1428,6 @@ label > span {
     }
 
     /* Start Pricing page */
-
     .pricing-container-main {
         height: auto;
         display: flex;
@@ -1465,7 +1459,6 @@ label > span {
     textarea {
         width: 100%;
     }
-
 
     label>span {
         display: inline-block;
@@ -1569,11 +1562,6 @@ label > span {
         display: block;
     }
 
-    nav.nav-item {
-        margin: 1rem;
-        align-self: flex-start;
-    }
-
     nav .navlinks.active {
         right: 0;
         height: 30rem;
@@ -1595,7 +1583,7 @@ label > span {
 
     /* Start footer*/
     footer {
-        height: 27rem;
+        height: 30rem;
         justify-content: center;
         flex-direction: column;
         padding: 0;
@@ -1604,6 +1592,7 @@ label > span {
     .social-icons-container {
         margin-left: 0;
         justify-content: center;
+        gap: 1.5rem;
     }
 
     footer .navlinks {
@@ -1612,6 +1601,7 @@ label > span {
         flex-direction: column;
         padding: 3rem 0;
         margin-bottom: 3rem;
+        gap: 1rem;
     }
 
     footer .logo-container {
@@ -1664,5 +1654,4 @@ label > span {
         top: -10rem;
         z-index: 0;
     }
-
 }
