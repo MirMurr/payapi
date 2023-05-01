@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
+    <script src="ready.js" async></script>
+    <title>Frontend Mentor | PayAPI Website Challenge</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="current">
+          <div class="logo-container">
+            <img src="./assets/shared/desktop/logo.svg" alt="payapi logo">
+          </div>
+        </a>
+        <ul class="navlinks" id="navigation">
+          <li><a class="navlink" href="./pricing.html">Pricing</a></li>
+          <li><a class="navlink" href="./about.html">About</a></li>
+          <li><a class="navlink" href="./contact.html">Contact</a></li>
+          <li><button type="button" class="demo-mobile" onclick="window.location.replace='./contact.html'">Schedule a demo</button></li>
+        </ul>
+        <button type="button" class="demo" onclick="window.location.replace='./contact.html'">Schedule a demo</button>      
+        <div class="circle-img-container pricing-c">
+          <img src="./assets/shared/desktop/bg-pattern-circle.svg" alt="circle pattern image">
+        </div> <!--this was in the ul-->
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="title">
+        <h1>Pricing</h1>
+      </div>
+      <section class="pricing">
+        <div class="pricing-container-main">
+          <div>
+            <h4>Free Plan</h4>
+            <p>Build and test using our core set of products with up to 100 API requests</p>
+            <span class="price">$0.00</span>
+          </div>
+          <hr>
+          <ul>
+            <li class="checked">Transactions</li>
+            <li class="checked">Auth</li>
+            <li class="checked">Identity</li>
+            <li>Investments</li>
+            <li>Assets</li>
+            <li>Liabilities</li>
+            <li>Income</li>
+          </ul>
+          <hr>
+          <button class="access" type="button" onclick="window.location.href = 'contact.html'">Request Access</button>
+        </div>
+        <div class="pricing-container-main">
+          <div>
+            <h4>Basic Plan</h4>
+            <p>Launch your project with unlimited requests and no contractual minimums</p>
+            <span class="price">$249.00</span>
+          </div>
+          <hr>
+          <ul>
+            <li class="checked">Transactions</li>
+            <li class="checked">Auth</li>
+            <li class="checked">Identity</li>
+            <li class="checked">Investments</li>
+            <li class="checked">Assets</li>
+            <li>Liabilities</li>
+            <li>Income</li>
+          </ul>
+          <hr>
+          <button class="access" type="button" onclick="window.location.href = 'contact.html'">Request Access</button>
+        </div>
+
+        <div class="pricing-container-main">
+          <div>
+            <h4>Premium Plan</h4>
+            <p>Get tailored solutions, volume pricing, and dedicated support for your team</p>
+            <span class="price">$499.00</span>
+          </div>
+          <hr>
+          <ul>
+            <li class="checked">Transactions</li>
+            <li class="checked">Auth</li>
+            <li class="checked">Identity</li>
+            <li class="checked">Investments</li>
+            <li class="checked">Assets</li>
+            <li class="checked">Liabilities</li>
+            <li class="checked">Income</li>
+          </ul>
+          <hr>
+          <button class="access" type="button" onclick="window.location.href = 'contact.html'">Request Access</button>
+        </div>
+      </section>
+      <section class="form-ready">
+        <h2>Ready to start?</h2>
+        <form class="ready-form readyjs" name="submit-to-google-sheet-ready">
+          <label for="ready-email" hidden>Message</label>
+          <input type="email" name="Ready Form" placeholder="Enter email address" id="ready-email" class="ready-input">
+          <button type="submit" class="demo">Schedule a Demo</button>
+          <div class="error-msg"></div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="icon-container footer">
+        <ul class="navlinks">
+          <div class="logo-container">
+            <img src="./assets/shared/desktop/logo.svg" alt="payapi logo">
+          </div>
+          <li><a class="navlink" href="./pricing.html">Pricing</a></li>
+          <li><a class="navlink" href="./about.html">About</a></li>
+          <li><a class="navlink" href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="social-icons-container">
+        <div>
+          <a href="facebook.com"><img src="./assets/shared/desktop/facebook.svg" alt="facebook logo" aria-label="facebook logo"></a>
+        </div>
+        <div>
+          <a href="twitter.com"><img src="./assets/shared/desktop/twitter.svg" alt="twitter logo" aria-label="twitter logo"></a>
+        </div>
+        <div>
+          <a href="linkedin.com"><img src="./assets/shared/desktop/linkedin.svg" alt="linkedin logo" aria-label="linkedin logo"></a>
+        </div>
+      </div>
+      <div class="circle-img-container-footer">
+        <img src="./assets/shared/desktop/bg-pattern-circle.svg" alt="circle pattern image">
+      </div>
+    </footer>        
+  </body>
+</html>
