@@ -37,17 +37,29 @@ Under this link you can find the project folder which needed to connect the form
 ### Screenshot
 
 ![mobile](./375px_hamburger.png)
+
 ![mobile](./375px.png)
+
 ![mobile](./pricing375px.png)
+
 ![mobile](./about375px.png)
+
 ![mobile](./contactu375px.png)
+
 ![tablet](./about768px.png)
+
 ![tablet](./home768px.png)
+
 ![tablet](./contact768px.png)
+
 ![tablet](./pricing768px.png)
+
 ![desktop](./about1440px.png)
+
 ![desktop](./index1440px.png)
+
 ![desktop](./pricing1440px.png)
+
 ![desktop](./contact1440px.png)
 
 
