@@ -1,29 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=DM+Serif+Display&family=Epilogue:wght@500;700&family=Great+Vibes&family=Inter:wght@300;400&family=Kumbh+Sans:wght@200;400;500;700&family=Montserrat:wght@300;400&family=Mukta:wght@300;400;500;700&family=Nixie+One&family=Nunito:wght@200;300;600;700&family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@700&family=Raleway:wght@400;700&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=DM+Serif+Display&family=Epilogue:wght@500;700&family=Great+Vibes&family=Inter:wght@300;400&family=Kumbh+Sans:wght@200;400;500;700&family=Montserrat:wght@300;400&family=Mukta:wght@300;400;500;700&family=Nixie+One&family=Nunito:wght@200;300;600;700&family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@700&family=Public+Sans:wght@100;200;300;400;500&family=Raleway:wght@400;700&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400&display=swap');
 
-
 :root {
     --ff-heading: "DM Serif Display", serif;
     --ff-body: "Public Sans", sans-serif;
 
     --clr-primary-btn: #ba4270;
     --clr-secondary-btn: #da6d97;
-
     --clr-primary-white: #fbfcfe;
-
     --clr-secondary-light-blue: #6c8294;
     --clr-secondary-mid-blue: #36536b;
     --clr-secondary-dark-blue: #1b262f;
     --clr-primary-bg: rgb(237, 243, 248);
     --clr-error: rgb(255, 132, 132);
-
+    
     /*placeholder fonts*/
     --fs-small-placeholder: 0.7rem;
-
     /*body fonts*/
     --fs-body: 0.9375;
     /*design spec*/
-
     /*Heading fonts*/
     --fs-500: 4.5rem;
     --fs-400: 3.5rem;
@@ -36,7 +31,6 @@
     /*h3 small*/
     --fs-000: 1.5rem;
     /*h4 small*/
-
     /*Paddings*/
     --paddinglr-5: 5rem;
     --paddinglr-6: 6rem;
@@ -46,7 +40,6 @@
     :root {
         --fs-body: 1.25;
         /*design spec*/
-
         --fs-500: 5.5rem;
         --fs-400: 4.5rem;
         /*h1 small*/
@@ -68,22 +61,16 @@
         --fs-500: 4rem;
         /*h1 big*/
         /*maybe too big for tablet*/
-
-        /*adjust these:*/
         --fs-400: 3rem;
         /*h1 small*/
-        /*ADJUSTED*/
         --fs-300: 2.7rem;
         /*h2 small*/
-        /*ADJUSTED*/
         --fs-200: 2rem;
         /*h3 big*/
-        /* ADJUSTED */
         --fs-100: 2.125rem;
         /*h3 small*/
         --fs-000: 1.25rem;
         /*h4 small*/
-        /*ADJUSTED*/
 
         /*Paddings*/
         --paddinglr-5: 2.5rem;
@@ -97,8 +84,6 @@
         /*design spec*/
         --fs-500: 2.8rem;
         /*h1 big*/
-
-        /*adjust these:*/
         --fs-400: 2.4rem;
         /*h1 small*/
         --fs-300: 2.2rem;
@@ -186,11 +171,9 @@ button.access {
     margin-top: 2rem;
     width: 8rem;
 }
-
 /* BUTTONS END */
 
 /* HEADINGS, PARAGRAPHS */
-
 h1,
 h2,
 h3,
@@ -520,7 +503,6 @@ h1 {
 .ux-ui p {
     width: 70%;
 }
-
 /***** START UI UX IMAGES SECTION *****/
 
 section.ux-ui {
@@ -547,7 +529,6 @@ section.ux-ui {
     right: -25rem;
     top: -7rem;
     min-width: 560px;
-    /*max-width: 700px; fix the figure with media query */
     z-index: -1;
     height: auto;
 }
@@ -582,7 +563,6 @@ section.advantages .container {
     font-family: var(--ff-body);
     font-weight: 900;
 }
-
 /******* END ADVANTAGES SECTION ***********/
 
 /******* START READY SECTION ***********/
@@ -673,11 +653,9 @@ footer div.attribution, footer .attribution a {
 footer .attribution a {
     text-decoration: underline;
 }
-
 /********************************************** END HOMEPAGE **********************************************/
 
 /********************************************** START PRICING PAGE **********************************************/
-
 .title h1 {
     padding: 0rem var(--paddinglr-5);
     margin-top: 2rem;
@@ -798,7 +776,6 @@ section.pricing {
     width: 100%;
     height: auto;
 }
-
 /* end team member image section */
 
 /* start numbers section */
@@ -903,7 +880,6 @@ label > span {
 .ref-icon-container {
     height: auto;
 }
-
 /********************************************** END CONTACT PAGE **********************************************/
 
 /**************** Media queries - tablet *****************/
@@ -1573,7 +1549,7 @@ label > span {
         margin: 0;
     }
 
-    footer .circle-img-container-footer { /*edit this*/
+    footer .circle-img-container-footer {
         position: absolute;
         top: 14rem;
         margin-left: 50%;
